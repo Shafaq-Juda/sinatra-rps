@@ -1,0 +1,20 @@
+<%if @our_move != "rock" && @our_move != "paper" && @our_move != "scissors"%>
+<h2>Invalid move</h2>
+<%elsif%>
+<h2>We played <%= @our_move %>!</h2>
+<h2>They played <%= @comp_move %> !</h2>
+<%end%>
+
+<% if @outcome == "won" %>
+  <h2 style = "color: green;">We <%= @outcome %> !</h2>
+<% elsif @outcome == "lost" %>  
+  <h2 style = "color: red;">We <%= @outcome %> !</h2>
+<% elsif @outcome == "tied" %>  
+  <h2 style = "color: black;">We <%= @outcome %> !</h2>
+<% else %>
+  <h2> <%= @outcome %> </h2>
+  <%end %>
+
+<div>
+    <a href = "/">Rules</a>
+</div>
